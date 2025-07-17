@@ -21,7 +21,7 @@
 
 ```bash
 git clone https://github.com/OmerFarukAY/WordMaster.git
-cd word_master
+cd WordMaster
 flutter pub get
 flutter run
 ```
