@@ -14,25 +14,22 @@
 
 ---
 
-## 📱 Ekran Görüntüleri
-
-> Ekran görüntüleri buraya eklenecek (örneğin: `assets/screenshots/1.png` vs.)
-
----
-
 ## ⚙️ Kurulum
 
 1. Flutter SDK'nın yüklü olduğundan emin olun.
 2. Projeyi klonlayın:
 
 ```bash
-git clone https://github.com/kullanici-adin/word_master.git
-cd word_master
+git clone https://github.com/OmerFarukAY/WordMaster.git
+cd WordMaster
 flutter pub get
 flutter run
+```
 
+---
 
 📦 Kullanılan Teknolojiler
+
 Flutter
 
 Dart
