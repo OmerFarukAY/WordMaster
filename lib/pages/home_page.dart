@@ -9,19 +9,36 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.lightGreen[100],
-      appBar: _buildAppBar(),
+      backgroundColor: Colors.grey[500],
+      appBar: _buildAppBar(context),
       body:  _buildBody(context),
     );
   }
-  _buildAppBar(){
+  _buildAppBar(context){
     return AppBar(
       title: Text("ANA SAYFA",
-        style: TextStyle(fontWeight: FontWeight.bold),
+        style: TextStyle(fontWeight: FontWeight.bold,
+        color: Colors.black
+        ),
       ),
       centerTitle: true,
-      backgroundColor: Colors.lightGreen,
-        automaticallyImplyLeading: false
+      backgroundColor: Colors.black45,
+        automaticallyImplyLeading: false,
+      actions: [
+        Padding(
+          padding: const EdgeInsets.all(5),
+          child: IconButton(
+            icon: Icon(
+              Icons.person,
+              size: 40,
+              color: Colors.black,
+            ),
+            onPressed: (){
+              Navigator.pushNamed(context, '/profile-page');
+            },
+          ),
+        ),
+      ],
     );
   }
 
@@ -34,8 +51,7 @@ class HomePage extends StatelessWidget {
             padding: const EdgeInsets.all(16),
             child: Card(
               elevation: 10,
-              shadowColor: Colors.green,
-              color: Colors.greenAccent[100],
+              color: Colors.blueGrey[600],
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: <Widget>[
@@ -45,7 +61,7 @@ class HomePage extends StatelessWidget {
                      Text('ENGLISH - TURKISH \n     WORD FINDER',
                       style: TextStyle(
                         fontSize: 24,
-                        color: Colors.black87,
+                        color: Colors.black,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -55,7 +71,6 @@ class HomePage extends StatelessWidget {
                     child: Text("KELİME",
                       style: TextStyle(
                         fontSize: 18,
-                        color: Colors.black54,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -78,7 +93,7 @@ class HomePage extends StatelessWidget {
                     padding: const EdgeInsets.all(32),
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom (
-                        backgroundColor: Colors.green[500],
+                        backgroundColor: Color(0xff00a500),
                         padding: const EdgeInsets.symmetric(horizontal: 64, vertical: 14),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(12),

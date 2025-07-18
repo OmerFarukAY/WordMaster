@@ -6,14 +6,16 @@ class PasswordRenewal extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.lightGreen[100],
+      backgroundColor: Colors.grey[500],
       appBar: AppBar(
         title: const Text(
-          "Şifre Yenileme",
-          style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+          "ŞİFRE YENİLEME",
+          style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold,
+          color: Colors.black,
+          ),
         ),
         centerTitle: true,
-        backgroundColor: Colors.lightGreen,
+        backgroundColor: Colors.black45,
       ),
       body: Center(
         child: Padding(

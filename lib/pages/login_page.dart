@@ -16,7 +16,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.lightGreen[100],
+      backgroundColor: Colors.grey[500],
       appBar: _buildAppBar(),
       body:  _buildBody(context,),
     );
@@ -25,10 +25,12 @@ class _LoginPageState extends State<LoginPage> {
   _buildAppBar(){
     return AppBar(
       title: Text("HOŞ GELDİNİZ",
-        style: TextStyle(fontWeight: FontWeight.bold),
+        style: TextStyle(fontWeight: FontWeight.bold,
+        color: Colors.black,
+        ),
       ),
       centerTitle: true,
-      backgroundColor: Colors.lightGreen,
+        backgroundColor: Colors.black45,
         automaticallyImplyLeading: false
     );
   }
@@ -55,7 +57,7 @@ class _LoginPageState extends State<LoginPage> {
                 ),
                 prefixIcon: Icon(Icons.person),
                 filled: true,
-                fillColor: Colors.white,
+                fillColor: Colors.blueGrey[300],
               ),
             ),
           ),
@@ -70,7 +72,7 @@ class _LoginPageState extends State<LoginPage> {
                 ),
                 prefixIcon:  Icon(Icons.lock),
                 filled: true,
-                fillColor: Colors.white,
+                fillColor: Colors.blueGrey[300],
               ),
             ),
           ),
@@ -86,7 +88,7 @@ class _LoginPageState extends State<LoginPage> {
                   },
                   child: Text("Şifremi Unuttum",
                     style: TextStyle(
-                      color: Colors.blueAccent
+                      color: Colors.blueAccent[700]
                     ),
                   ),
                 ),
@@ -100,7 +102,8 @@ class _LoginPageState extends State<LoginPage> {
                         });
                       },
                     ),
-                    Text("Beni Hatırla"),
+                    Text("Beni Hatırla",
+                    style:TextStyle(color: Colors.black),),
                   ],
                 ),
               ],
@@ -109,14 +112,15 @@ class _LoginPageState extends State<LoginPage> {
           SizedBox(height: 16,),
           ElevatedButton(
             style: ElevatedButton.styleFrom (
-              backgroundColor: Colors.green[500],
+              backgroundColor: Color(0xff00a500),
               padding: const EdgeInsets.symmetric(horizontal: 64, vertical: 14),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(12),
               ),
             ),
             onPressed: (){
-              Navigator.pushReplacementNamed(context, '/admin-panel');
+              Navigator.pushReplacementNamed(context, '/admin-panel'
+                  '');
             },
             child: Text(
               "GİRİŞ YAP",
