@@ -46,15 +46,20 @@ class _ProfilePageState extends State<ProfilePage> {
     final theme = Theme.of(context);
 
     return Scaffold(
-      backgroundColor: Colors.grey[500],
+      backgroundColor: Color(0xffFEFAE0),
       appBar: AppBar(
         title: Text("PROFİL AYARLARI",
           style: TextStyle(fontWeight: FontWeight.bold,
-          color: Colors.black,
+          color: Colors.white,
           ),
         ),
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back, color: Colors.white),
+          onPressed: () => Navigator.of(context).pop(),
+        ),
+        automaticallyImplyLeading : false,
         centerTitle: true,
-        backgroundColor: Colors.black45,
+        backgroundColor: Color(0xff0A400C),
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16),
@@ -68,7 +73,7 @@ class _ProfilePageState extends State<ProfilePage> {
                     backgroundImage: _profileImage != null
                         ? FileImage(_profileImage!)
                         : AssetImage('assets/logo.png') as ImageProvider,
-                    backgroundColor: Colors.grey[200],
+                    backgroundColor: Color(0xff0A400C),
                   ),
 
                 ],
@@ -82,6 +87,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 title: Text("E-posta"),
                 subtitle: Text(email),
               ),
+              color: Color(0xffB1AB86),
             ),
             const SizedBox(height: 12),
             Card(
@@ -91,6 +97,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 title: Text("Telefon Numarası"),
                 subtitle: Text(phone),
               ),
+              color: Color(0xffB1AB86),
             ),
 
             const SizedBox(height: 24),
@@ -107,7 +114,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   ),
                   prefixIcon: const Icon(Icons.lock),
                   filled: true,
-                  fillColor: Colors.white,
+                  fillColor: Color(0xffB1AB86),
                 ),
               ),
             ),
@@ -123,7 +130,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   ),
                   prefixIcon: const Icon(Icons.lock),
                   filled: true,
-                  fillColor: Colors.white,
+                  fillColor: Color(0xffB1AB86),
                 ),
               ),
             ),
@@ -139,7 +146,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   ),
                   prefixIcon: const Icon(Icons.lock),
                   filled: true,
-                  fillColor: Colors.white,
+                  fillColor: Color(0xffB1AB86),
                 ),
               ),
             ),
@@ -155,7 +162,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 ),
               ),
               style: ElevatedButton.styleFrom(
-                backgroundColor: Color(0xff00a500),
+                backgroundColor: Color(0xff819067),
                 foregroundColor: Colors.black,
                 padding: const EdgeInsets.symmetric(horizontal: 64, vertical: 14),
                 shape: RoundedRectangleBorder(
@@ -166,7 +173,7 @@ class _ProfilePageState extends State<ProfilePage> {
             SizedBox(height: 16,),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
-                backgroundColor: Color(0xff00a500),
+                backgroundColor: Color(0xff819067),
                 padding: const EdgeInsets.symmetric(horizontal: 64, vertical: 14),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(12),

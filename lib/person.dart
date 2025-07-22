@@ -21,4 +21,5 @@ class person {
 
   @HiveField(3)
   String role;
+
 }

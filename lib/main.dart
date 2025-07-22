@@ -6,7 +6,7 @@ import 'package:word_master/pages/home_page.dart';
 import 'package:word_master/pages/login_page.dart';
 import 'package:word_master/pages/password_renewal.dart';
 import 'package:word_master/pages/profile_page.dart';
-import 'package:word_master/pages/word_settings.dart';
+import 'package:word_master/pages/user_management.dart';
 import 'package:word_master/person.dart';
 import 'package:word_master/words.dart';
 
@@ -32,12 +32,13 @@ class AnaUygulama extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+
       //home: RoleManager.currentRole == null ? LoginPage() : HomePage(),
       home: LoginPage(),
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         useMaterial3: true,
-        colorSchemeSeed: Colors.lightGreen,
+        colorSchemeSeed: Color(0xff819067),
         brightness: Brightness.light,
         fontFamily: 'Urbanist',
       ),
@@ -47,7 +48,7 @@ class AnaUygulama extends StatelessWidget {
         '/password-renewal': (_) => PasswordRenewal(),
         '/admin-panel': (_) => AdminPanel(),
         '/profile-page': (_) => ProfilePage(),
-        '/word-settings': (_) => WordSettings(),
+        '/user-management': (_) => UserManagement(),
       },
     );
   }

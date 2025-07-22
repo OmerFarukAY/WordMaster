@@ -11,12 +11,14 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+
   bool rememberMe = false;
  // Beni Hatırla durumu
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[500],
+      backgroundColor: Color(0xffFEFAE0),
       appBar: _buildAppBar(),
       body:  _buildBody(context,),
     );
@@ -26,11 +28,11 @@ class _LoginPageState extends State<LoginPage> {
     return AppBar(
       title: Text("HOŞ GELDİNİZ",
         style: TextStyle(fontWeight: FontWeight.bold,
-        color: Colors.black,
+        color: Colors.white,
         ),
       ),
       centerTitle: true,
-        backgroundColor: Colors.black45,
+        backgroundColor: Color(0xff0A400C),
         automaticallyImplyLeading: false
     );
   }
@@ -57,7 +59,7 @@ class _LoginPageState extends State<LoginPage> {
                 ),
                 prefixIcon: Icon(Icons.person),
                 filled: true,
-                fillColor: Colors.blueGrey[300],
+                fillColor: Color(0xffB1AB86),
               ),
             ),
           ),
@@ -72,7 +74,7 @@ class _LoginPageState extends State<LoginPage> {
                 ),
                 prefixIcon:  Icon(Icons.lock),
                 filled: true,
-                fillColor: Colors.blueGrey[300],
+                fillColor: Color(0xffB1AB86),
               ),
             ),
           ),
@@ -112,21 +114,21 @@ class _LoginPageState extends State<LoginPage> {
           SizedBox(height: 16,),
           ElevatedButton(
             style: ElevatedButton.styleFrom (
-              backgroundColor: Color(0xff00a500),
+              backgroundColor: Color(0xff0A400C),
               padding: const EdgeInsets.symmetric(horizontal: 64, vertical: 14),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(12),
               ),
             ),
             onPressed: (){
-              Navigator.pushReplacementNamed(context, '/admin-panel'
+              Navigator.pushReplacementNamed(context, '/home-page'
                   '');
             },
             child: Text(
               "GİRİŞ YAP",
               style: TextStyle(
                 fontSize: 18,
-                color: Colors.black87,
+                color: Colors.black,
                 fontWeight: FontWeight.bold,
               ),
             ),
