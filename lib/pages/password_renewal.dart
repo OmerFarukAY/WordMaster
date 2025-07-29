@@ -6,7 +6,7 @@ class PasswordRenewal extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[500],
+      backgroundColor: Color(0xffFEFAE0),
       appBar: AppBar(
         title: const Text(
           "ŞİFRE YENİLEME",
@@ -15,7 +15,7 @@ class PasswordRenewal extends StatelessWidget {
           ),
         ),
         centerTitle: true,
-        backgroundColor: Colors.black45,
+        backgroundColor: Color(0xff0A400C),
       ),
       body: Center(
         child: Padding(
@@ -43,7 +43,7 @@ class PasswordRenewal extends StatelessWidget {
               const SizedBox(height: 24),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.green[600],
+                  backgroundColor: Color(0xff0A400C),
                   padding: const EdgeInsets.symmetric(horizontal: 64, vertical: 14),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(12),

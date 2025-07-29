@@ -13,8 +13,8 @@ class _ProfilePageState extends State<ProfilePage> {
   final _newPasswordController = TextEditingController();
   final _confirmPasswordController = TextEditingController();
 
-  final String email = 'ayfaruk.01@gmail.com'; // örnek
-  final String phone = '+90 552 206 7901';     // örnek
+  final String id = '123123'; // örnek
+  final String isim = 'Omer';     // örnek
 
 
   void _changePassword() {
@@ -82,22 +82,22 @@ class _ProfilePageState extends State<ProfilePage> {
             const SizedBox(height: 24),
             Card(
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-              child: ListTile(
-                leading: Icon(Icons.email),
-                title: Text("E-posta"),
-                subtitle: Text(email),
-              ),
               color: Color(0xffB1AB86),
+              child: ListTile(
+                leading: Icon(Icons.star_purple500_rounded),
+                title: Text("Kullanıcı ID"),
+                subtitle: Text(id),
+              ),
             ),
             const SizedBox(height: 12),
             Card(
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-              child: ListTile(
-                leading: Icon(Icons.phone),
-                title: Text("Telefon Numarası"),
-                subtitle: Text(phone),
-              ),
               color: Color(0xffB1AB86),
+              child: ListTile(
+                leading: Icon(Icons.person_outline_rounded),
+                title: Text("Kullanıcı Adı"),
+                subtitle: Text(isim),
+              ),
             ),
 
             const SizedBox(height: 24),

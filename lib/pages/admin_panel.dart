@@ -107,7 +107,7 @@ class _AdminPanelState extends State<AdminPanel> {
             padding: const EdgeInsets.all(16),
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
-                backgroundColor: Color(0xff819067),
+                backgroundColor: Color(0xff0A400C),
                 padding: const EdgeInsets.symmetric(
                   horizontal: 64,
                   vertical: 14,

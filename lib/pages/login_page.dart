@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:word_master/boxes.dart';
 
 void main(){
 
@@ -14,8 +15,21 @@ class _LoginPageState extends State<LoginPage> {
 
   bool rememberMe = false;
  // Beni Hatırla durumu
-
+  final TextEditingController userNameController =
+  TextEditingController();
+  final TextEditingController passwordController =
+  TextEditingController();
+  final TextEditingController roleController =
+  TextEditingController();
   @override
+
+  void dispose() {
+    userNameController.dispose();
+    passwordController.dispose();
+    roleController.dispose();
+    super.dispose();
+  }
+
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xffFEFAE0),
@@ -52,6 +66,7 @@ class _LoginPageState extends State<LoginPage> {
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 32),
             child: TextField(
+              controller: userNameController,
               decoration: InputDecoration(
                 labelText: "Kullanıcı Adı",
                 border: OutlineInputBorder(
@@ -67,6 +82,7 @@ class _LoginPageState extends State<LoginPage> {
           Padding(
             padding:  EdgeInsets.symmetric(horizontal: 32),
             child: TextField(
+              controller: passwordController,
               decoration: InputDecoration(
                 labelText: "Şifre",
                 border: OutlineInputBorder(
@@ -120,9 +136,26 @@ class _LoginPageState extends State<LoginPage> {
                 borderRadius: BorderRadius.circular(12),
               ),
             ),
+
             onPressed: (){
-              Navigator.pushReplacementNamed(context, '/home-page'
-                  '');
+
+              var role = "";
+              final loginUser = boxPersons.values.where((user) =>
+              user.username == userNameController.value && user.password == passwordController.value);
+
+              if (loginUser.isEmpty) {
+                print("rol yok");
+              }
+
+              role = loginUser.first.role;
+              if (role == "admin") {
+                Navigator.pushReplacementNamed(context, "/admin-panel");
+              } else if (role == "user") {
+                Navigator.pushReplacementNamed(context, "/home-page");
+              } else {
+                Navigator.pushReplacementNamed(context, "/login-page");
+              }
+
             },
             child: Text(
               "GİRİŞ YAP",

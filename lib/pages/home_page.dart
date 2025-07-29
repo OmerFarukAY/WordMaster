@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:hive/hive.dart';
-import 'package:word_master/boxes.dart';
-import 'package:word_master/words.dart';
 
 void main(){
 

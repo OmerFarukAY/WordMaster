@@ -5,12 +5,12 @@ class RoleManager {
   static String? currentRole;
 
   static void loadRole() {
-    final box = Hive.box("userBox");
+    final box = Hive.box("boxPersons");
     currentRole = box.get("role");
   }
 
   static void clearRole() {
-    final box = Hive.box("userBox");
+    final box = Hive.box("boxPersons");
     box.delete("role");
     currentRole = null;
   }
